@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+}
+  
+body {
+    font-family: Cursive;
+    padding: 10px;
+    background-color: gray;
+}
+  
+.header {
+    padding: 10px;
+    background: #000000;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+
+  
+.CBarreNav {
+    overflow: hidden;
+    background-color: #000000;
+    
+}
+.CBarreNav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+  
+.CBarreNav a {
+    float: left;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.Cars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 10%;
+  gap: 100px;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.Cars-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.Cars-card:hover {
+  transform: translateY(-10px);
+}
+
+.Cars-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.Cars-info {
+  padding: 16px;
+  text-align: center;
+}
+
+.Cars-title {
+  font-size: 1.5em;
+  margin: 0 0 10px;
+}
+
+.Cars-description {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0 0 20px;
+}
+
+.Cars-price {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.add-to-cart-btn {
+  background-color: #3c3f3dcf;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0c0d0d;
+}
+
+
+.top-bar{
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 1%;
+ 
+}
+.pic{
+  width: 60%;
+    border-width: 0cap;
+   
+  }
+  .line{
+    margin: 10px;
+    width: 700px;
+  }
+  .text1{
+    color:gray;
+    text-align: center;
+    margin-top: 10%;
+  }
+  .title{
+color: black;
+margin-left: 30%;
+
+}
+
+  .grand-title{
+    margin-left: 50%;
+  }
+  .button {
+    background-color: #636b68;
+    border: none;
+    color: rgb(18, 17, 17);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  .butm{
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    width: 40%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none; 
+    transition: 0.5s
+}
+.butm:hover{
+    background-color: #766e6e;
+    color: black;
+}
+  .btn{
+    padding-left: 48%
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #676563;
+  margin-top: 20px;
+}

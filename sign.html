@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="LOGO.png">
+    <title> Login Page</title>
+    <link rel="stylesheet" href="sign.css">
+   
+</head>
+
+<body>
+   
+  <div class="header">
+        
+    <img src='nameblack.png' class="logo">
+</div>
+  
+<div class="CBarreNav">
+<div id="myNav" class="overlay">
+      <div class="overlay-content">
+        <a href="home.html" target="_blank">Home</a>
+        <a href="about.html" target="_blank">About</a>
+        <a href="models.html" target="_blank">Models</a>
+        <a href="911.html" target="_blank">Shop</a>
+        <a href="directYOU.html" target="_blank">Direct you</a>
+        <a href="sign.html" target="_blank" style="float: right;">Loging</a>
+
+          </div>
+        </div>
+        </div>
+        <div class="forms">
+<div id="logform">
+    <form action="home.html" onsubmit="return login()">
+        <h2>Log In</h2><br>
+        <label for="userlog"> UserName :</label>
+        <input type="text" id="userlogin" placeholder="Enter your username"><br>
+        <label for="passlogin"> Password:</label>
+        <input type="password" id="passlogin" placeholder="Enter your password" ><br><br>
+        <span id="A1" ; style="font-family: montserrat ; font-size: 1.2em; font-weight: 300;position: relative;bottom: 33px;left: 310px;"></span><br>
+        <input type="checkbox" onclick="ShowPass()" > <span>Show Password</span>
+        <input type="submit" value="Login">
+          <p>Not a member? </p> 
+          <button onclick="hide()">Sign Up</button>
+        </form>
+</div>
+    <div id="signform">
+        <form id="secondform" action="" onsubmit="return signfb()">
+    
+            <h2>Sign Up</h2><br>  
+            <input type="text" id="usersign" placeholder="Create Username" required><br>
+            <input type="password" id="passsign" placeholder="Create Password" required><br>
+            <input type="text" id="namesign" placeholder="Enter Full Name" required><br>
+            <input type="text" id="mailsign" placeholder="Enter Email" required><br><br>
+            <span id="s1"> </span><br>
+            <a href="about.html"><input type="submit" value="Register"></a>
+            <p>Already have an account? </p><button onclick="hide()">Log In</button>
+
+    </div>
+
+    <div class="footer">
+      <p>®Dotmarketing  All rights Reserved. |<a href="Privacy Policy.html" target="_blank"> </a>Privacy Policy<a href="Cookie policy.html" target="_blank"> Cookie policy </a> <a href="Consumption / Emissions.html" target="_blank"> Consumption / Emissions</a>  <a href="Open Source Software Notice.html" target="_blank"> Open Source Software Notice</a></p>
+      <p>* Values ​​determined according to the mandatory legal measurement method. Since September 1, 2018, vehicles have been approved according to the WLTP standard (Worldwide Harmonized Light Vehicles Test Procedure). To the extent that the WLTP values ​​are given in the form of ranges of values, they do not relate to a single vehicle and are not an integral part of the offer: their sole objective is to allow comparisons between the different types of vehicles. Certain options and equipment may vary certain vehicle parameters such as weight, rolling resistance or air resistance and, in addition to weather conditions, traffic conditions or driving style, may vary consumption. fuel, electricity, CO₂ emissions and vehicle performance.</p>
+  </div>
+    
+</div>
+<script>
+  var users = [{ username:'zohra', password:'zohra2003' },
+               { username:'Montacer', password:'0000000' },
+               { username:'Amale', password:'sheeeesh' },
+               { username:'Amine', password:'mmmmmmmmm' },
+               { username:'Mustapha', password:'00aaA00000' },
+               { username:'khadija', password:'0000001111' },
+               { username:'Othman', password:'Q12344444' },
+               { username:'Sara', password:'00000000' },
+               { username:'ghita', password:'000GHITA1' },
+               { username:'Malak', password:'Malak2001' },
+               { username:'Moncef', password:'1111@@000' },
+               { username:'Fatiha', password:'lamooooresoo' },
+               { username:'salma', password:'salma2006@0' },
+               { username:'loofey', password:'00000001' },
+               { username:'Arwa', password:'fouuArwaa!!' },
+
+              ]
+    
+
+function ShowPass(){
+
+        var passInput = document.getElementById('passlogin');
+         if(passInput.type == 'password'){
+            passInput.type = 'text'
+        }else if(passInput.type == 'text'){
+            passInput.type = 'password'
+        }
+}
+
+function login(){
+
+    var userValue = document.getElementById('userlogin').value;
+    var passValue = document.getElementById('passlogin').value;
+    
+    if(userValue ==''){
+        document.getElementById('A1').innerHTML = 'Username must be filled out';
+        return false;
+    }
+    else if(passValue == ''){
+        document.getElementById('A1').innerHTML = 'Password name must be filled out';
+        return false;
+    }
+    
+
+    
+for (var i=0 ; i<users.length;i++){
+    if (userValue==users[i].username && passValue ==users[i].password){
+        return true ;
+    }
+}
+document.getElementById('A1').innerHTML = "Password and username do not match";
+                  return false;
+    
+
+        }
+
+  
+ 
+    
+ 
+
+ function signfb(){
+
+    var userNameValue = document.getElementById('usersign').value;
+    var passValue = document.getElementById('passsign').value;
+    
+    
+    if (passValue.length<8) {
+        document.getElementById('s1').innerHTML = 'password must containe 8 caractaire';
+      return false;
+        }else{
+            var user ={};
+            user.username= userNameValue;
+            user.password = passValue;
+            users.push(user);
+            console.log(users)
+        }
+}
+
+
+const divcontent=document.querySelector('#logform');
+const div1content=document.querySelector('#signform');
+let click=true;
+let hide = function hide(){
+  if(click){
+   divcontent.style.display='none';
+   div1content.style.display='block'
+   click=false;
+  }else{
+   div1content.style.display='none'
+   divcontent.style.display='block';
+   click=true;
+  }}
+</script>
+</body>
+</html>
